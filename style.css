@@ -1,0 +1,144 @@
+/* Base Styles */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+  color: var(--dark-color);
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  color: var(--dark-color);
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* Counters */
+.counters-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.counter-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  transition: transform 0.3s ease;
+}
+
+.counter-card:hover {
+  transform: translateY(-5px);
+}
+
+.counter-card h3 {
+  color: #7f8c8d;
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.counter-value {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+/* Recent Leads */
+.recent-leads {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.recent-leads h3 {
+  color: #7f8c8d;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.leads-table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .counters-container {
+    flex-direction: column;
+  }
+  
+  .counter-card {
+    min-width: 100%;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/pages/index.js",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/leads",
+      "dest": "src/pages/api/leads.js",
+      "methods": ["GET", "POST"]
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@your-mongodb-uri"
+  }
+}
